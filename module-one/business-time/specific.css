@@ -1,0 +1,37 @@
+.flex-navbar > div {
+    padding: 20px;
+    text-align: center;
+    color: steelblue;
+}
+
+h1 {
+    color: steelblue;
+    text-align: center; 
+}
+
+h2 {
+    color: steelblue;
+    text-align: center;
+}
+
+p {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Setting Up Link Styling (follow format) */
+a {
+    text-decoration: none;
+    color: steelblue;
+}
+
+a:link {
+    color: steelblue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+

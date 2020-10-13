@@ -1,0 +1,289 @@
+/* French Flag */
+.french-flag {
+    height: 0;
+    overflow: hidden;
+    padding-top: 66%;
+    background: white;
+    position: relative;
+}
+
+.french-flag-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.french-flag-inside .left {
+    height: 100%;
+    width: 32%;
+    background: #002495;
+    float: left;
+}
+
+.french-flag-inside .middle {
+    height: 100%;
+    width: 32%;
+    background: #FFFFFF;
+    float: left;
+}
+
+.french-flag-inside .right {
+    height: 100%;
+    width: 32%;
+    background: #ED2938;
+    float: left;
+}
+/* German Flag */
+.german-flag {
+    height: 0;
+    overflow: hidden;
+    padding-top: 60%;
+    background: white;
+    position: relative;
+}
+
+.german-flag-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.german-flag-inside .top {
+    height: 32%;
+    width: 100%;
+    background: #000000;
+}
+
+.german-flag-inside .middle {
+    height: 32%;
+    width: 100%;
+    background: #DE0002;
+}
+
+.german-flag-inside .bottom {
+    height: 32%;
+    width: 100%;
+    background: #FFCE00;
+}
+
+/* Madagascar Flag */
+.madagascar-flag {
+    height: 0;
+    overflow: hidden;
+    padding-top: 66%;
+    background: white;
+    position: relative;
+}
+
+.madagascar-flag-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.madagascar-flag-inside .left {
+    height: 100%;
+    width: 32%;
+    background: #FFFFFF;
+    float: left;
+}
+
+.madagascar-flag-inside .top {
+    height: 50%;
+    width: 100%;
+    background: #FC3E32;
+}
+
+.madagascar-flag-inside .bottom {
+    height: 50%;
+    width: 100%;
+    background: #007E39;
+}
+
+/* Swiss Flag */
+.swiss-flag {
+    height: 0;
+    overflow: hidden;
+    padding-top: 100%;
+    background: #FF0002;
+    position: relative;
+}
+
+.swiss-flag-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.swiss-flag-inside .swiss-vertical {
+    height: 60%;
+    width: 20%;
+    margin-top: 20%;
+    margin-left: 40%;
+    background: #FFFFFF;
+}
+
+.swiss-flag-inside .swiss-horizontal {
+    height: 20%;
+    width: 60%;
+    margin-top: -40%;
+    margin-left: 20%;
+    background: #FFFFFF;
+}
+
+/* Swedish Flag */
+.swedish-flag {
+    height: 0;
+    overflow: hidden;
+    padding-top: 62.5%;
+    background: #0269A6;
+    position: relative;
+}
+
+.swedish-flag-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.swedish-flag-inside .swedish-vertical {
+    height: 100%;
+    width: 10%;
+    margin-top: 0;
+    margin-left: 30%;
+    background: #FECC00;
+}
+
+.swedish-flag-inside .swedish-horizontal {
+    height: 17%;
+    width: 100%;
+    margin-top: -32%;
+    margin-left: 0%;
+    background: #FECC00;
+}
+
+/* Gambian Flag */
+.gambian-flag {
+    height: 0;
+    overflow: hidden;
+    padding-top: 66%;
+    background: white;
+    position: relative;
+}
+
+.gambian-flag-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.gambian-flag-inside .first {
+    height: 33%;
+    width: 100%;
+    background: #CE1127;
+}
+
+.gambian-flag-inside .second {
+    height: 5%;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.gambian-flag-inside .third {
+    height: 23%;
+    width: 100%;
+    background: #0D1D8B;
+}
+
+.gambian-flag-inside .fourth {
+    height: 5%;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.gambian-flag-inside .fifth {
+    height: 33%;
+    width: 100%;
+    background: #3B7827;
+}
+
+/* Japanese Flag */
+.japanese-flag {
+    height: 0;
+    overflow: hidden;
+    padding-top: 66%;
+    background: #FFFFFF;
+    position: relative;    
+}
+
+.japanese-flag-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.japanese-flag-inside .middle {
+    height: 70%;
+    width: 45%;
+    border-radius: 50%;
+    margin-top: 10%;
+    margin-left: 30%;
+    background: #BC022C;
+}
+
+.niger-flag {
+    height: 0;
+    overflow: hidden;
+    padding-top: 85.7%;
+    background: #FFFFFF;
+    position: relative;    
+}
+
+.niger-flag-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.niger-flag-inside .top {
+    height: 33%;
+    width: 100%;
+    background: #E15307;
+}
+
+.niger-flag-inside .div-middle {
+    height: 33%;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.div-middle .middle-circle {
+    height: 95%;
+    width: 25%;
+    border-radius: 50%;
+    margin-top: 1.5%;
+    margin-left: 38%;
+    background: #E15307;    
+}
+
+.niger-flag-inside .bottom {
+    height: 33%;
+    width: 100%;
+    background: #10AF2A;
+}
