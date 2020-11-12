@@ -81,5 +81,3 @@ var peopleWhoWantToSeeMadMaxFuryRoad = [
   }
   console.log(button)
 
-
-  
