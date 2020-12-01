@@ -1,0 +1,36 @@
+body {
+    padding: 5%;
+}
+.div-one {
+    padding: 10%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color:rgb(189, 132, 158);
+    opacity: .7;
+}
+
+.div-two {
+    padding: 10%;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: x-large;
+    background-color:rgb(147, 191, 176);
+    opacity: .8;
+}
+
+.div-three {
+    padding: 10%;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: large;
+    background-color: rgb(224, 154, 123);
+    opacity: .7;
+}
+
+#result-sub {
+    font-size: large;
+}
+
+#result-add {
+    font-size: large;
+}
