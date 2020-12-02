@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Travel Form</title>
+</head>
+<body>
+
+    <div class="form-container">
+
+        <form name="travelForm">
+            First Name: <input type="text" name="firstName" required> 
+            <br> 
+            <br>
+            Last Name: <input type="text" name="lastName" required>
+            <br>
+            <br>
+            Age: <input type="number" name="age" required>
+            <br>
+            <br>
+            Gender:
+            <br>
+            Male: <input type="radio" name="gender" value="Male"> Female: <input type="radio" name="gender" value="Female">
+            <br>
+            <br>
+            Destination:
+            <select name="destination" required>
+                <option value="" disabled selected>Select a Destination</option>
+                <option value="Hogwarts">Hogwarts</option>
+                <option value="Fillory">Fillory</option>
+                <option value="Lima">Lima</option>
+            </select>
+            <br>
+            <br>
+            Dietary Restrictions:
+            <br>
+            <input type="checkbox" name="diet" value="Vegan"> Vegan
+            <br>
+            <input type="checkbox" name="diet" value="Gluten-free"> Gluten-free
+            <br>
+            <input type="checkbox" name="diet" value="Vegetarian"> Vegetarian
+            <br>
+            <br>
+            <button>Book Now</button>
+
+        </form>
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

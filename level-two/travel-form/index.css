@@ -1,0 +1,10 @@
+body {
+    padding: 5%;
+}
+
+.form-container {
+    padding: 2%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(175, 177, 209, 0.6);
+}
