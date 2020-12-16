@@ -1,0 +1,65 @@
+{
+    "appetizers": [
+        {
+            "name": "Papa a la Huancaina",
+            "ingredients": ["Potatoes", "Huancaina Sauce", "Lettuce", "Olive"],
+            "description": "Two baked potatoes served with the signature creamy Peruvian Huancaina sauce."
+        },
+        {
+            "name": "Causa rellena de pollo",
+            "ingredients": ["Potatoes", "Chicken", "Aji Amarillo", "Mayo"],
+            "description": "A cake-like mashed potato dish, infused with shredded chicken, and Peruvian Aji Amarillo pepper."
+        }
+    ],
+    "coldSandwhiches": [
+        {
+            "name": "Sandwhich de Pollo a la Braza",
+            "ingredients": ["Chicken", "Lettuce", "Mayo", "Cellery", "French Bun"],
+            "description": "Perus famous rotisserie chicken, shredded, and combined with mayo and cellery."
+        },
+        {
+            "name": "Triple Peruano",
+            "ingredients": ["Eggs", "Mayo", "White Bread", "Avocado", "Tomatoes"],
+            "description": "Hard-boiled eggs, avocado, and tomatoes, layered on a triangluar cut, triple-decker sandwhich."
+        }
+    ],
+    "hotSandwhiches": [
+        {
+            "name": "Pan con Chicharron",
+            "ingredients": ["Fried Pork", "Sweet Potatoes", "Onions with a lemon juice mixture", "French Bun"],
+            "description": "A french bun filled with sliced sweet potatoes, Salsa Criollo, and our savory fried pork."
+        },
+        {
+            "name": "Mixto",
+            "ingredients": ["White bread", "ham", "cheese"],
+            "description": "Our classic toasted ham and cheese sandwhich"
+        }
+    ],
+    "desserts": [
+        {
+            "name": "Alfajores",
+            "ingredients": ["Shortbread cookie", "Manjar Blanco"],
+            "description": "Peru's delicious carmel-like filling, between two flakey shortbread cookies."
+        },
+        {
+            "name": "Picarones",
+            "ingredients": ["Sweet potato batter", "oil"],
+            "description": "Peruvian style fried scones"
+        }
+    ],
+    "drinks": [
+        {
+            "name": "Chicha Morada",
+            "ingredients": ["Purple corn", "sugar", "lime", "cinnamon sticks"],
+            "description": "A unique refreshing Peruvian drink"
+        },
+        {
+            "name": "Maracuya",
+            "ingredients": ["Passion Fruit"],
+            "description": "A delicious passion fruit drink"
+        }
+    ]
+}
+
+
+
