@@ -1,0 +1,145 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+ height: 100%;
+}
+
+
+body {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(rgb(110, 185, 255), rgb(3, 252, 232));
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 33.33%);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+/*#main-div {
+    border-radius: 10px;
+    height: 600px;
+    width: 500px;
+    background-color: rgba(245, 245, 245, .2);
+}
+*/
+
+.todoInputDivWrapper{
+    grid-column: 2/4;
+    grid-row: 1/2;
+    /*border: 1px solid black;*/
+}
+
+.todoInputDiv {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#listInput {
+    width: 250px;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, .1);
+    padding: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    transition: all 0.3s ease-in-out;
+}
+
+#listInput:hover {
+    width: 300px;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, .1);
+    padding: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.2);
+    padding: 15px;
+}
+
+input, textarea {
+    font-family:inherit;
+    font-size: inherit;
+  }
+
+*:focus {outline:none !important}
+
+
+
+button {
+    appearance: none;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, .1);
+    padding: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    transition: all 0.3s ease-in-out;
+    color: rgba(0, 0, 0, 0.473);
+    font-size: large;
+}
+
+button:hover {
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, .1);
+    padding: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.2);
+    padding: 15px;
+}
+
+/*LIST*/
+
+.listDivWrapper {
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+
+#listDiv {
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+align-items: center;
+padding-top: 10%;
+}
+
+#listDiv > div {
+    width: 350px;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, .1);
+    padding: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+#listDiv > div:hover {
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, .1);
+    padding: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.2);
+    padding: 15px;
+}
+
+.customClass {
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, .1);
+    padding: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    margin-top: 10px;
+}
