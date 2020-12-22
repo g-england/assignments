@@ -78,7 +78,11 @@ window.addEventListener("load", () => {
             const lineBreak = document.createElement("br")
             div.append(checkbox)
             div.append(newP, newP2, newP3)
-            div.append(newImage)
+            if (image !== ""){
+                div.append(newImage)
+            } else {
+                newImage.style.display = 'none'
+            }
             div.append(lineBreak)
             div.append(trashButton, editButton)
             
@@ -182,7 +186,11 @@ form.addEventListener("submit", function(event) {
 
             div.append(checkbox)
             div.append(newP, newP2, newP3)
-            div.append(newImage)
+            if (image == "something"){
+                div.append(newImage)
+            } else {
+                newImage.display = "none"
+            }
             div.append(lineBreak)
             div.append(trashButton, editButton)
            
