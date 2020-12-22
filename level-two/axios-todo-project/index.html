@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Axios Todo Project</title>
 </head>
 <body>
@@ -12,7 +13,10 @@
         <div class="todoInputDivWrapper">
             <div class="todoInputDiv">
                 <form name="myForm" id="myForm">
-                    <input type="text" id="listInput" placeholder="Add an item" name="input" autocomplete="off">
+                    <input type="text" class="input" id="title" placeholder="Title:" name="title" autocomplete="off">
+                    <input type="text" class="input" id="description" placeholder="Description:" name="description" autocomplete="off">
+                    <input type="text" class="input" id="price" placeholder="Price:" name="price" autocomplete="off">
+                    <input type="text" class="input" id="image" placeholder="Image Url:" name="image" autocomplete="off">
                     <button type="submit">+</button>
                 </form> 
             </div>
@@ -31,7 +35,7 @@
 
 
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

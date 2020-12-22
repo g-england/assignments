@@ -17,7 +17,7 @@ body {
 .wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 33.33%);
+    grid-template-rows: repeat(4, 1fr);
     height: 100%;
     width: 100%;
     position: fixed;
@@ -32,7 +32,7 @@ body {
 */
 
 .todoInputDivWrapper{
-    grid-column: 2/4;
+    grid-column: 1/5;
     grid-row: 1/2;
     /*border: 1px solid black;*/
 }
@@ -43,11 +43,11 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 
-#listInput {
+.input {
     width: 250px;
     border-radius: 10px;
     background-color: rgba(245, 245, 245, .1);
@@ -57,7 +57,7 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-#listInput:hover {
+.input:hover {
     width: 300px;
     border-radius: 10px;
     background-color: rgba(245, 245, 245, .1);
@@ -71,6 +71,7 @@ input, textarea {
     font-family:inherit;
     font-size: inherit;
   }
+
 
 *:focus {outline:none !important}
 
@@ -100,8 +101,9 @@ button:hover {
 /*LIST*/
 
 .listDivWrapper {
-    grid-column: 2/4;
-    grid-row: 2/4;
+    grid-column: 1/5;
+    grid-row: 2/5;
+    
 }
 
 #listDiv {
@@ -109,9 +111,11 @@ height: 100%;
 width: 100%;
 display: flex;
 flex-direction: column;
-flex-wrap: nowrap;
-align-items: center;
-padding-top: 10%;
+flex-wrap: wrap;
+align-items: start;
+padding-right: 10%;
+padding-left: 10%;
+padding-bottom: 5%;
 }
 
 #listDiv > div {
@@ -143,3 +147,9 @@ padding-top: 10%;
     box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
     margin-top: 10px;
 }
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
