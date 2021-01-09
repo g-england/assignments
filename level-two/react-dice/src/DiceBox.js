@@ -27,6 +27,11 @@ const diceData = [
         id: 5,
         number: 0,
         color: "white"
+    },
+    {
+        id: 6,
+        number: 0,
+        color: "white"
     }
 ]
 
