@@ -1,10 +1,10 @@
 import React from "react"
 
-function ListItem(props) {
+function ListItem({name, image}) {
     return(
         <div className="list-item">
-            <h2>- {props.name} -</h2>
-            <img src={props.image} alt=""/>
+            <h2>- {name} -</h2>
+            <img src={image} alt=""/>
         </div>
     )
 }
