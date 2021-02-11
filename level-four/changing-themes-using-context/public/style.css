@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+main {
+    margin-top: 60px;
+    padding: 10px;
+    text-align: center;
+    color: gray;
+}
+
+footer.light-theme {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(58, 191, 209, 0.26);
+    color: grey;
+}
+
+footer.dark-theme {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: gray;
+    color: rgba(58, 191, 209);
+
+}
+
+ul.light-theme{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: rgba(58, 191, 209, 0.26);
+    color: gray;   
+}
+
+ul.dark-theme{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: gray;
+    color: rgba(58, 191, 209);
+}
+
+li {
+    float: left;
+    padding: 15px;
+    font-size: 25px;
+}
+
+button.light-theme {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(58, 191, 209, 0.26);
+    color: gray;
+    text-decoration: none;
+}
+
+button:focus {
+    outline: none
+}
+
+button.light-theme:hover {
+    background-color: rgba(58, 191, 209, 0.815);
+}
+
+button.dark-theme {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+    color: rgba(58, 191, 209);
+    text-decoration: none;
+}
+
+button.dark-theme:hover {
+    background-color: rgb(151, 147, 147);
+}
