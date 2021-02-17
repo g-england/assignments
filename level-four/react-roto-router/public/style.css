@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0px;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: gray;   
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+    padding: 10px;
+    font-size: 20px;
+}
+
+a:hover {
+    color: rgb(80, 78, 78);
+    border: 1px solid rgb(172, 168, 168);
+    border-radius: 4px;
+}
+
+a:focus {
+    border: 1px solid rgb(172, 168, 168);
+    border-radius: 4px;
+}
+
+h1 {
+    margin-top: 75px;
+    text-align: center;
+    color: rgb(117, 112, 112);
+}
+
+p {
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: grey;
+}
