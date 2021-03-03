@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    input {
+        @apply border border-gray-500 rounded;
+    }
+    html, body {
+        @apply max-w-full overflow-x-hidden;
+    }
+}
+
+@layer utilities {
+    @keyframes test {
+        from {left: 0px;}
+        to {left: 200px;}
+    }
+    .fade {
+        animation-name: test;
+        animation-duration: 1s;
+        animation-fill-mode: right;
+    }
+}
