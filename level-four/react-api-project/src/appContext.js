@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import { useHistory } from "react-router-dom"
 import axios from "axios"
 const AppContext = React.createContext()
 
@@ -7,7 +8,8 @@ function AppContextProvider(props) {
 
     const API_KEY = process.env.REACT_APP_API_KEY
 
-
+    const [avgBill, setAvgBill] = useState("")
+    const [usage, setUsage] = useState("")
 
     const [form, setForm] = useState({
         format: "json",
@@ -47,8 +49,11 @@ function AppContextProvider(props) {
         }
     }
     
-    function handleSubmit(event) {
+    function handleSubmit(event, history) {
         event.preventDefault()
+        if (history.location.pathname === "/system") {
+            history.push("/result")
+        }
         axios.get("https://developer.nrel.gov/api/pvwatts/v6.json?", {params: form})
         .then(res => {
             const data = res.data.outputs.ac_annual
@@ -56,8 +61,22 @@ function AppContextProvider(props) {
         })
     }
 
+    function billOnChange(event) {
+        const {value} = event.target
+        setAvgBill(value)
+    }
+
+    function billOnSubmit(event, history) {
+        event.preventDefault()
+        const usageTotal = (avgBill/.1331) * 12
+        setUsage(usageTotal)
+        history.push("/address");
+    }
+
+    console.log(usage)
+
     return (
-        <AppContext.Provider value={{handleSubmit, setForm: handleChange, address: form.address, type: form.array_type, azimuth: form.azimuth, size: form.system_capacity, form}}>
+        <AppContext.Provider value={{billOnSubmit, billOnChange, avgBill, handleSubmit, setForm: handleChange, address: form.address, type: form.array_type, azimuth: form.azimuth, size: form.system_capacity, form}}>
             {props.children}
         </AppContext.Provider>
     )

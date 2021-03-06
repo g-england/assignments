@@ -1,6 +1,7 @@
 import React, {useContext} from "react"
 import {AppContext} from "./appContext"
 import {useHistory} from "react-router-dom"
+import {motion} from "framer-motion"
 
 function Address() {
     const {setForm, address} = useContext(AppContext)
@@ -11,19 +12,23 @@ function Address() {
     }
 
     return (
-        <div class="flex flex-row justify-center">
+        <motion.div class="flex flex-row justify-center mt-36 p-10"
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        transition={{delay: 0.5, duration: 1}}
+        >
             <form onSubmit={handleSubmit} class="flex flex-col">
                 <input 
                 name="address"
                 value={address}
                 onChange={setForm} 
                 placeholder="Address:" 
-                class="p-1" 
+                class="p-1 border border-gray-400 rounded text-gray-500 bg-transparent"
                 required
                 /> <br />
-                <input type="submit" value="next" class="self-center border border-gray-500 rounded p-0.5 text-gray-500 bg-gray-200"/>
+                <input type="submit" value="next" class="p-1 border border-gray-400 rounded text-gray-500 bg-transparent"/>
             </form> <br />
-        </div>
+        </motion.div>
     )
 }
 
