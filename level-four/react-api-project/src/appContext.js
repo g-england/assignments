@@ -1,5 +1,4 @@
 import React, {useState} from "react"
-import { useHistory } from "react-router-dom"
 import axios from "axios"
 const AppContext = React.createContext()
 
@@ -10,6 +9,8 @@ function AppContextProvider(props) {
 
     const [avgBill, setAvgBill] = useState("")
     const [usage, setUsage] = useState("")
+    const [production, setProduction] = useState("")
+    const [actualNumbers, setActualNumbers] = useState({produces: "", uses: ""})
 
     const [form, setForm] = useState({
         format: "json",
@@ -57,7 +58,15 @@ function AppContextProvider(props) {
         axios.get("https://developer.nrel.gov/api/pvwatts/v6.json?", {params: form})
         .then(res => {
             const data = res.data.outputs.ac_annual
-            console.log(data)
+            const rounded = Math.round(data)
+            setActualNumbers(prevNumbers => {
+                return {
+                    ...prevNumbers,
+                    produces: data
+                }
+            })
+            const formatted = new Intl.NumberFormat().format(rounded);
+            setProduction(formatted)
         })
     }
 
@@ -69,14 +78,37 @@ function AppContextProvider(props) {
     function billOnSubmit(event, history) {
         event.preventDefault()
         const usageTotal = (avgBill/.1331) * 12
-        setUsage(usageTotal)
+        const rounded = Math.round(usageTotal)
+        setActualNumbers(prevNumbers => {
+            return {
+                ...prevNumbers,
+                uses: rounded
+            }
+        })
+        const formatted = new Intl.NumberFormat().format(rounded);
+        setUsage(formatted)
         history.push("/address");
     }
 
-    console.log(usage)
-
+    function newQuote(history) {
+        setAvgBill("")
+        setForm({
+            format: "json",
+            api_key: `${API_KEY}`,
+            system_capacity: "",
+            module_type: 0,
+            losses: 14.08,
+            array_type: "",
+            tilt: 20,
+            azimuth: "",
+            address: ""
+        })
+        history.push("/bill")
+    }
+    
     return (
-        <AppContext.Provider value={{billOnSubmit, billOnChange, avgBill, handleSubmit, setForm: handleChange, address: form.address, type: form.array_type, azimuth: form.azimuth, size: form.system_capacity, form}}>
+        <AppContext.Provider value={{actualNumbers, usage, production, billOnSubmit, billOnChange, avgBill, handleSubmit, setForm: handleChange, address: form.address, type: form.array_type, 
+                             azimuth: form.azimuth, size: form.system_capacity, form, newQuote}}>
             {props.children}
         </AppContext.Provider>
     )

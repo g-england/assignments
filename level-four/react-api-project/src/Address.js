@@ -11,23 +11,38 @@ function Address() {
         history.push("/system");
     }
 
+    const buttonVariants = {
+        hover: {
+            scale: 1.1,
+            duration: 5
+        }
+    }
+
     return (
-        <motion.div class="flex flex-row justify-center mt-36 p-10"
+        <motion.div class="flex flex-col place-items-center mt-24 p-10"
         initial={{opacity: 0}}
         animate={{opacity: 1}}
-        transition={{delay: 0.5, duration: 1}}
+        transition={{duration: 1}}
         >
-            <form onSubmit={handleSubmit} class="flex flex-col">
+            <h1 class="text-gray-500">2. With your location, we can calculate how much</h1>
+            <h1 class="text-gray-500">sun exposure your home gets each year.</h1>
+            <h1 class="text-gray-500">Pretty cool right?</h1>
+            <form onSubmit={handleSubmit} class="flex flex-col place-items-center p-10">
                 <input 
-                name="address"
-                value={address}
-                onChange={setForm} 
-                placeholder="Address:" 
-                class="p-1 border border-gray-400 rounded text-gray-500 bg-transparent"
-                required
-                /> <br />
-                <input type="submit" value="next" class="p-1 border border-gray-400 rounded text-gray-500 bg-transparent"/>
-            </form> <br />
+                    name="address"
+                    value={address}
+                    onChange={setForm} 
+                    placeholder="Address:" 
+                    class="p-1 border border-gray-400 rounded text-gray-500 bg-transparent"
+                    required
+                /> 
+                <br />
+
+                <motion.input type="submit" value="next" class="p-1 border border-gray-400 rounded text-gray-500 bg-transparent w-32"
+                    variants={buttonVariants}
+                    whileHover="hover"
+                />
+            </form> 
         </motion.div>
     )
 }

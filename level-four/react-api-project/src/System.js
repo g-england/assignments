@@ -7,14 +7,23 @@ function System() {
     const history = useHistory();
     const {handleSubmit, setForm, type, azimuth, size} = useContext(AppContext)
  
+    const buttonVariants = {
+        hover: {
+            scale: 1.1,
+            duration: 5
+        }
+    }
+
     return (
         <motion.div class="flex flex-col place-items-center mt-40"
         initial={{opacity: 0}}
         animate={{opacity: 1}}
-        transition={{delay: 0.5, duration: 1}}
+        transition={{duration: 1}}
         >
-            <h1 class="text-gray-500">System Info:</h1>
-            <form onSubmit={(event) => handleSubmit(event, history)} class="flex flex-col">
+            <h1 class="text-gray-500">3. To finish up, a few bits of information from your quoted system</h1>
+            <h1 class="text-gray-500">will give us a complete picture.</h1>
+            
+            <form onSubmit={(event) => handleSubmit(event, history)} class="flex flex-col p-10">
                 <input 
                 onChange={setForm}
                 value={size}
@@ -44,7 +53,7 @@ function System() {
                     class="mb-3 p-1 border border-gray-400 rounded text-gray-400 bg-transparent"
                     required
                 >
-                    <option value="">Select a direction</option>
+                    <option value="">System is facing:</option>
                     <option value="0">North</option>
                     <option value="45">North East</option>
                     <option value="90">East</option>
@@ -54,7 +63,10 @@ function System() {
                     <option value="270">West</option>
                     <option value="315">North West</option>
                 </select>
-                <input type="submit" value="Verify!" class="self-center p-1 border border-gray-400 rounded text-gray-500 bg-transparent"/>
+                <motion.input type="submit" value="Verify!" class="self-center p-1 border border-gray-400 rounded text-gray-500 bg-transparent w-32"
+                    variants={buttonVariants}
+                    whileHover="hover"
+                />
             </form>
         </motion.div>
     )
