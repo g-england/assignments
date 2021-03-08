@@ -11,7 +11,7 @@ function About() {
         >
             <h1 class="text-gray-500 self-center text-xl mb-5 border-b border-gray-400">About</h1>
             <p>This app was created out of a desire to bring more transparency to the solar buying process.
-                Solar systems are complex and are could be more difficult to understand than many of your other home purchases. </p>
+                Solar systems are complex and can be more difficult to understand than many of your other home purchases. </p>
             <p>Often, going solar is avoided  completely because buyers don't have enough information.</p>
             <p>Utilizing advanced solar technology and data, this app aims to shed some light on the solar buyer's journey. We hope you find it helpful. </p>
         </motion.div>

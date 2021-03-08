@@ -21,7 +21,7 @@ function Bill() {
             animate={{opacity: 1}}
             transition={{duration: 1}}
         >
-            <h1 class="text-gray-500">1. First we need figure out how much you spend a month on power.</h1>
+            <h1 class="text-gray-500">Step 1 - First we need figure out how much you spend a month on power.</h1>
             <h1 class="text-gray-500">Give us your best estimate, the more precise the better.</h1>
             <form onSubmit={(event) => billOnSubmit(event, history)} class="flex flex-col place-items-center p-10">
                 <input onChange={billOnChange} value={avgBill} placeholder="Average Monthly Power Bill:" type="number" 

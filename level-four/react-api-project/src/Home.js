@@ -27,14 +27,15 @@ function Home() {
     }
 
     return (
-        <motion.div class="flex flex-col place-items-center mt-12 p-10"
+        <motion.div class="flex flex-col place-items-center mt-32 p-10"
             variants={containerVariants}
             initial="initial"
             animate="animate"
             transition={{delay: 0.5, duration: 1.5}}
         >
-            <h1 class="text-2xl text-gray-500 text-opacity-60">Sometimes you need a second opinion...buying solar is one of those times.</h1>
-            <p class="text-gray-500 text-opacity-60">Make sure your quote is accurate in just a few quick steps!</p>
+            <h1 class="text-2xl text-gray-500 text-opacity-80">Sometimes you need a second opinion...</h1>
+            <h1 class="text-2xl text-gray-500 text-opacity-80">buying solar is one of those times.</h1>
+            <p class="text-gray-500 text-opacity-80">Make sure your quote is accurate in just a few quick steps!</p>
             <br></br>
 
             <motion.button onClick={handleSubmit} class="p-1 border border-gray-400  max-w-xs rounded text-gray-500 bg-transparent mt-10"

@@ -24,7 +24,7 @@ function Address() {
         animate={{opacity: 1}}
         transition={{duration: 1}}
         >
-            <h1 class="text-gray-500">2. With your location, we can calculate how much</h1>
+            <h1 class="text-gray-500">Step 2 - With your location, we can calculate how much</h1>
             <h1 class="text-gray-500">sun exposure your home gets each year.</h1>
             <h1 class="text-gray-500">Pretty cool right?</h1>
             <form onSubmit={handleSubmit} class="flex flex-col place-items-center p-10">

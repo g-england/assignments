@@ -20,7 +20,7 @@ function System() {
         animate={{opacity: 1}}
         transition={{duration: 1}}
         >
-            <h1 class="text-gray-500">3. To finish up, a few bits of information from your quoted system</h1>
+            <h1 class="text-gray-500">Step 3 - To finish up, a few bits of information from your quoted system</h1>
             <h1 class="text-gray-500">will give us a complete picture.</h1>
             
             <form onSubmit={(event) => handleSubmit(event, history)} class="flex flex-col p-10">
