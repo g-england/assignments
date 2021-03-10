@@ -1,5 +1,5 @@
 import React from "react"
-import {Link} from "react-router-dom"
+import {Link, NavLink} from "react-router-dom"
 import { motion } from "framer-motion"
 
 function Navbar() {
@@ -9,11 +9,11 @@ function Navbar() {
             animate={{y: 0}}
             transition={{duration: 1}}
         >
-            <ul>
-                <li class="inline p-1"><Link to="/">Home</Link></li>
-                <li class="inline p-1"><Link to="/about">About</Link></li>
-                <li class="inline p-1"><Link to="/blog">Blog</Link></li>
-            </ul>
+           
+                <NavLink exact to="/" activeStyle={{textDecoration: "underline"}}>Home</NavLink>
+                <NavLink to="/about" activeStyle={{textDecoration: "underline"}}>About</NavLink>
+                <NavLink to="/blog" activeStyle={{textDecoration: "underline"}}>Blog</NavLink>
+            
         </motion.div>
     )
 }

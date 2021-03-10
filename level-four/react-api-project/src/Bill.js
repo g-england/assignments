@@ -16,25 +16,30 @@ function Bill() {
     }
 
     return (
-        <motion.div class="flex flex-col place-items-center mt-24 p-10"
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            transition={{duration: 1}}
-        >
-            <h1 class="text-gray-500">Step 1 - First we need figure out how much you spend a month on power.</h1>
-            <h1 class="text-gray-500">Give us your best estimate, the more precise the better.</h1>
-            <form onSubmit={(event) => billOnSubmit(event, history)} class="flex flex-col place-items-center p-10">
-                <input onChange={billOnChange} value={avgBill} placeholder="Average Monthly Power Bill:" type="number" 
-                class="p-1 border border-gray-400 rounded text-gray-500 bg-transparent w-60" required/> 
-                
-                <br />
+        <div>
+            <motion.div class="flex flex-col place-items-center mt-5 p-10"
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{delay: 0.5, duration: 1}}
+            >
+                <h1 class="text-gray-500 text-center">Step 1 - First we need figure out how much you spend a month on power.</h1>
+                <h1 class="text-gray-500">Give us your best estimate, the more precise the better.</h1>
+                <form onSubmit={(event) => billOnSubmit(event, history)} class="flex flex-col place-items-center p-10">
+                    <input onChange={billOnChange} value={avgBill} placeholder="Average Monthly Power Bill:" type="number" 
+                    class="p-1 border border-gray-400 rounded text-gray-500 bg-transparent w-60" required/> 
+                    
+                    <br />
 
-                <motion.input type="submit" value="next" class="p-1 border border-gray-400 rounded text-gray-500 bg-transparent w-32"
-                    variants={buttonVariants}
-                    whileHover="hover"
-                />
-            </form>
-        </motion.div>
+                    <motion.input type="submit" value="next" class="p-1 border border-gray-400 rounded text-gray-500 bg-transparent w-32"
+                        variants={buttonVariants}
+                        whileHover="hover"
+                    />
+                </form>
+            </motion.div>
+            <div class="mt-5 sm:mt-24 opacity-90 sm:opacity-60 md:opacity-50">
+                <img src={"/assets/images/house.png"}></img>
+            </div>
+        </div>
     )
 }
 
