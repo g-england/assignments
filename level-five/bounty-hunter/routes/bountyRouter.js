@@ -28,7 +28,7 @@ bountyRouter.route("/")
 bountyRouter.route("/:bountyId")
     .get((req,res) => {
         const boundyId = req.params.boundyId
-        const foundBounty = bounties.find(bounty => bounties._id === boundyId)
+        const foundBounty = bounties.find(bounty => bounty._id === boundyId)
         res.send(foundBounty)
     })
 
@@ -45,7 +45,6 @@ bountyRouter.route("/:bountyId")
     .delete((req, res) => {
         const bountyId = req.params.bountyId
         const bountyIndex = bounties.findIndex(bounty => bounty._id === bountyId)
-        console.log(bountyIndex)
         const deletedBounty = `${bounties[bountyIndex].firstName} ${bounties[bountyIndex].lastName}`
         bounties.splice(bountyIndex, 1)
         res.send(`Successfully deleted ${deletedBounty}!`)
