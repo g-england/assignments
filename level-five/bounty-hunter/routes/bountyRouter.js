@@ -3,11 +3,11 @@ const bountyRouter = express.Router()
 const {v4: uuidv4} = require('uuid')
 
 const bounties = [
-    {firstName: "Johnny", lastName: "Depp", living: false, bountyAmount: 5000, type: "Sith", _id: uuidv4()},
-    {firstName: "Matt", lastName: "Damon", living: false, bountyAmount: 5000, type: "Jedi", _id: uuidv4()},
-    {firstName: "Justin", lastName: "Beiber", living: false, bountyAmount: 5000, type: "Jedi", _id: uuidv4()},
-    {firstName: "Peter", lastName: "Griffin", living: false, bountyAmount: 5000, type: "Sith", _id: uuidv4()},
-    {firstName: "Lucifer", lastName: "Morningstar", living: false, bountyAmount: 5000, type: "Sith", _id: uuidv4()}
+    {firstName: "Johnny", lastName: "Depp", living: true, bountyAmount: 5000, type: "Sith", _id: uuidv4()},
+    {firstName: "Matt", lastName: "Damon", living: true, bountyAmount: 5000, type: "Jedi", _id: uuidv4()},
+    {firstName: "Justin", lastName: "Beiber", living: true, bountyAmount: 5000, type: "Jedi", _id: uuidv4()},
+    {firstName: "Peter", lastName: "Griffin", living: true, bountyAmount: 5000, type: "Sith", _id: uuidv4()},
+    {firstName: "Lucifer", lastName: "Morningstar", living: true, bountyAmount: 5000, type: "Sith", _id: uuidv4()}
 ]
 
 
@@ -38,6 +38,28 @@ bountyRouter.route("/search/type")
         const type = req.query.type
         const filteredBounties = bounties.filter(bounty => bounty.type === type)
         res.send(filteredBounties)
+    })
+
+//Delete one
+bountyRouter.route("/:bountyId")
+    .delete((req, res) => {
+        const bountyId = req.params.bountyId
+        const bountyIndex = bounties.findIndex(bounty => bounty._id === bountyId)
+        console.log(bountyIndex)
+        const deletedBounty = `${bounties[bountyIndex].firstName} ${bounties[bountyIndex].lastName}`
+        bounties.splice(bountyIndex, 1)
+        res.send(`Successfully deleted ${deletedBounty}!`)
+    })
+
+
+//Update one
+bountyRouter.route("/:bountyId")
+    .put((req, res) => {
+        const bountyId = req.params.bountyId
+        const updatedObject = req.body
+        const bountyIndex = bounties.findIndex(bounty => bounty._id === bountyId)
+        const updatedBounty = Object.assign(bounties[bountyIndex], updatedObject)
+        res.send(updatedBounty)
     })
 
 
