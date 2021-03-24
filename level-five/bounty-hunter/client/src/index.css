@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.bountyContainer{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.bounty{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

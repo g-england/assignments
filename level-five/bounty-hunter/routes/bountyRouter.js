@@ -1,18 +1,12 @@
 const express = require('express')
+const {bounties} = require('../bountyData.js')
 const bountyRouter = express.Router()
 const {v4: uuidv4} = require('uuid')
 
-const bounties = [
-    {firstName: "Johnny", lastName: "Depp", living: true, bountyAmount: 5000, type: "Sith", _id: uuidv4()},
-    {firstName: "Matt", lastName: "Damon", living: true, bountyAmount: 5000, type: "Jedi", _id: uuidv4()},
-    {firstName: "Justin", lastName: "Beiber", living: true, bountyAmount: 5000, type: "Jedi", _id: uuidv4()},
-    {firstName: "Peter", lastName: "Griffin", living: true, bountyAmount: 5000, type: "Sith", _id: uuidv4()},
-    {firstName: "Lucifer", lastName: "Morningstar", living: true, bountyAmount: 5000, type: "Sith", _id: uuidv4()}
-]
 
 
 
-//Get all / Post
+//Get all / Post one
 bountyRouter.route("/")
     .get((req, res) => {
         res.send(bounties)
@@ -21,7 +15,7 @@ bountyRouter.route("/")
         const newBounty = req.body
         newBounty._id = uuidv4()
         bounties.push(newBounty)
-        res.send(`Successfully added ${newBounty.firstName} ${newBounty.lastName} to the database!`)
+        res.send(newBounty)
     })
 
 //Get one
