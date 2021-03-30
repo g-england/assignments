@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import AddBountyForm from './AddBountyForm.js'
 
 function Bounty(props) {
-    const {firstName, lastName, bountyAmount, living, type, _id} = props
+    const {firstName, lastName, bountyAmount, allegiance, _id} = props
     const [editToggle, setEditToggle] = useState(false)
     
     useEffect(() => {
@@ -15,9 +15,8 @@ function Bounty(props) {
             <> 
             {/* React Fragment */}
                 <h1>{firstName} {lastName}</h1>
-                <h2>{type}</h2>
+                <h2>{allegiance}</h2>
                 <p>{`Price: $${bountyAmount}`}</p>
-                <h3>{living ? null: "Terminated!"}</h3>
                 <button
                     onClick={() => props.deleteBounty(_id)}>
                     Delete
@@ -32,7 +31,7 @@ function Bounty(props) {
                     firstName={firstName}
                     lastName={lastName}
                     bountyAmount={bountyAmount}
-                    type={type}
+                    allegiance={allegiance}
                     id={_id}
                     btnText="Submit"
                     submit={props.editBounty}

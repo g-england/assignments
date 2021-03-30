@@ -3,6 +3,8 @@ import './index.css'
 import axios from 'axios'
 import Bounty from './components/Bounty'
 import AddBountyForm from './components/AddBountyForm.js'
+import Filter from './components/Filter.js'
+
 
 function App() {
     const [bounties, setBounties] = useState([])
@@ -37,6 +39,16 @@ function App() {
             })
             .catch(err => console.log(err))
     }
+
+    function handleFilter(e){
+        if(e.target.value === "default"){
+            getBounties()
+        } else {
+            axios.get(`/bounties/search/allegiance?allegiance=${e.target.value}`)
+                .then(res => setBounties(res.data))
+                .catch(err => console.log(err))
+        }
+    }
         
 
     useEffect(() => {
@@ -49,9 +61,11 @@ function App() {
             <div className="bountyContainer">
                 <AddBountyForm 
                     submit={addBounty}
-                    btnText="Add Movie"
+                    btnText="Add Bounty"
                 /> 
-                <br />       
+                <br />    
+                <Filter handleFilter={handleFilter}/>
+                <br />   
                 {
                     bounties.map(bounty => 
                     <Bounty 
@@ -59,7 +73,8 @@ function App() {
                         bounties={bounties}
                         key={bounty._id}
                         deleteBounty={deleteBounty}
-                        editBounty={editBounty}/>)
+                        editBounty={editBounty}
+                        />)
                 }
             </div>
         </div>
